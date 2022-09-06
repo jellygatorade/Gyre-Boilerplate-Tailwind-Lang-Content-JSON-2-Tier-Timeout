@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="./common/style/fade-in.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./style/tailwind-compiled.css"
+    />
+  </head>
+
+  <body class="p-[2rem] bg-black text-white">
+    <!-- Timeout modal -->
+    <div
+      id="timeout-modal"
+      class="h-full w-full absolute top-0 left-0 z-[5000] invisible opacity-0 transition-all duration-300"
+    >
+      <div
+        id="timeout-modal-overlay"
+        class="h-full w-full absolute top-0 left-0 bg-black opacity-75 z-[5010]"
+      ></div>
+      <div
+        id="timeout-modal-tap-to-continue-overlay"
+        class="h-full w-full absolute top-0 left-0 timeout-modal-continue-btn z-[5050]"
+      ></div>
+      <div class="h-full flex flex-row justify-center items-center z-[5020]">
+        <div class="h-full flex flex-col justify-center items-center">
+          <div
+            class="relative max-h-[400px] max-w-[700px] opacity-100 z-[5020] bg-black border border-white rounded-2xl box-shadow-black-4px"
+          >
+            <div
+              class="w-full h-full flex flex-col flex-nowrap justify-between items-center py-[0.857rem] p-[1.5rem]"
+            >
+              <div
+                class="h-full w-full overflow-y-auto webkit-scrollbar text-xl text-center leading-loose"
+              >
+                <h2>
+                  <span lang="en" id="en-timeout-question">Question</span>
+                  <span lang="es" id="es-timeout-question">Question</span>
+                </h2>
+                <h2>
+                  <span lang="en" id="en-timeout-instruction">Instruction</span>
+                  <span lang="es" id="es-timeout-instruction">Instruction</span>
+                </h2>
+                <span
+                  id="timeout-countdown-text"
+                  class="text-4xl leading-normal font-CaseTextRegular"
+                  >Seconds</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="pb-[1rem]">
+      <span lang="en" id="en-home-heading"></span>
+      <span lang="es" id="es-home-heading"></span>
+    </h1>
+    <p class="pb-[1rem]">
+      <span lang="en" id="en-home-intro-text"></span>
+      <span lang="es" id="es-home-intro-text"></span>
+    </p>
+
+    <button id="toggle-lang-button" class="text-red-700">Español</button>
+
+    <script type="text/javascript" src="./common/script/fade-in.js"></script>
+    <script type="module" src="./script/script.js"></script>
+  </body>
+</html>
